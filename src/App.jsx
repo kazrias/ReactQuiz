@@ -15,21 +15,6 @@ const questions = [
     correct: 1,
   },
   {
-    title: `Что выведет интерпретатор для следующей программы (версия Python 3.6+)?
-
-    def get_name_and_decades(name, age):
-         print(f"My name is {name} and I'm {age / 10:.5f} decades old.")
-    get_name_and_decades("Leo", 31)`,
-    variants: [
-      "My name is Leo and I'm 31.00000 decades old.",
-      "My name is Leo and I'm 3.1 decades old.",
-      "Исключение: перед строкой стоит лишняя буква f.",
-      "My name is Leo and I'm 3.10000 decades old.",
-      "My name is {name} and I'm {age / 10:.5f} decades old."
-    ],
-    correct: 3,
-  },
-  {
     title: `Необходимо собрать и вывести все уникальные слова из строки рекламного текста. Какой из перечисленных типов данных Python подходит лучше всего?`,
     variants: [
       "кортеж (tuple)",
@@ -50,19 +35,6 @@ const questions = [
     correct: 2,
   },
   {
-    title: `Какой результат выведет следующий код?
-
-    def f(a, *pargs, **kargs): print(a, pargs, kargs)
-    f(1, 2, 3, x=4, y=5)`,
-    variants: [
-      "1, 2, 3, {'x': 4, 'y': 5}",
-      "1 (2, 3) {'x': 4, 'y': 5}",
-      "1, 2, 3, 'x=4', 'y=5'",
-      "1, 2, 3, 4, 5"
-    ],
-    correct: 1,
-  },
-  {
     title: `Как вывести список методов и атрибутов объекта x?`,
     variants: [
       "help(x)",
@@ -73,21 +45,6 @@ const questions = [
     correct: 3,
   },
   {
-    title: `Как можно более кратко представить следующую запись?
-
-    if X:
-         A = Y
-    else:
-         A = Z`,
-    variants: [
-      "A = Y if Z else Y",
-      "A = Y if X else Z",
-      "A = X if Z else Y",
-      "A = X if Y else Z"
-    ],
-    correct: 1,
-  },
-  {
     title: `Какая из перечисленных инструкций выполнится быстрее всего, если n = 10**6?`,
     variants: [
       "a = list(i for i in range(n))",
@@ -96,19 +53,6 @@ const questions = [
       "a = {i for i in range(n)}"
     ],
     correct: 2,
-  },
-  {
-    title: `Что выведет на экран следующий код?
- 
-    a, *b, c = [1, 2]
-    print(a, b, c)`,
-    variants: [
-      "[1] [] [2]",
-      "Будет вызвано исключение: элементов в списке меньше, чем переменных.",
-      "1 0 2",
-      "1 [] 2"
-    ],
-    correct: 3,
   },
   {
     title: `С помощью Python нужно записать данные в файл, но только в том случае, если файла ещё нет. Какой режим указать в инструкции open()?`,
