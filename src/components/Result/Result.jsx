@@ -1,5 +1,5 @@
 import './Result.scss'
-function Result({ correct,quantity }) {
+function Result({ onClickAgain,correct,quantity }) {
   let rightAns = ''
   if (correct % 10 === 1)
     rightAns = <span>ответ</span>
@@ -11,7 +11,7 @@ function Result({ correct,quantity }) {
     <div className="result">
       <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
       <h2>Вы отгадали {correct} {rightAns} из {quantity}.</h2>
-      <a href="/ReactQuiz"><button>Попробовать снова</button></a>
+      <button onClick={onClickAgain}>Попробовать снова</button>
     </div>
   );
 }

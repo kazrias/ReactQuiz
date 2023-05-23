@@ -29,15 +29,21 @@ function App() {
   const [step, setStep] = useState(0);
   const question = questions[step];
   const [correct, setCorrect] = useState(0);
+  const [again,setAgain]=useState(false);
   function onClickVariant(index) {
     if (question.correct === index)
       setCorrect(correct + 1);
     setStep(step + 1);
   }
+  function onClickAgain(){
+    setStep(0);
+    setCorrect(0);
+    setAgain(true)
+  }
   return (
     <div className='App'>
-      {step < questions.length ? <Game step={step} quantity={questions.length} onClickVariant={onClickVariant} question={question} /> :
-        <Result correct={correct} quantity={questions.length} />}
+      {(step < questions.length || again===true) ? <Game step={step} quantity={questions.length} onClickVariant={onClickVariant} question={question} /> :
+        <Result onClickAgain={onClickAgain} correct={correct} quantity={questions.length} />}
     </div>
   )
 }
