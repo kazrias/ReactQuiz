@@ -11,10 +11,12 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 0 15px;
 }
 
-.App {
-  width: 500px;
+#root {
+  flex-basis: 500px;
+  
   border-radius: 30px;
   padding: 40px;
   background-color: #fff;
