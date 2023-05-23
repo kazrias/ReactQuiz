@@ -13,7 +13,12 @@
     background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
   }
 }
-
+h1{
+  white-space: pre-line;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
 ul {
   list-style: none;
   padding: 0;

@@ -10,12 +10,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 15px;
 }
 
 #root {
-  flex-basis: 500px;
+  max-width: 500px;
+  width: 100%;
   
   border-radius: 30px;
   padding: 40px;
